@@ -1,0 +1,9 @@
+function [sopx]=Solid_OPX(T,Cwopx)
+Tk=T+273.15;
+a22=10^3.99;
+a23=10^2.58;
+H22=1.88;
+H23=0.84;
+b2=0.08;
+k=8.6173324*10^-5;
+sopx=a22*exp(-H22/(k*Tk))+a23*Cwopx*exp(-(H23-b2*Cwopx^(1/3))/(k*Tk));

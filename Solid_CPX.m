@@ -1,0 +1,9 @@
+function [scpx]=Solid_CPX(T,Cwcpx)
+Tk=T+273.15;
+a3=10^3.56;
+a31=10^2.16;
+H3=71*1000;
+H31=102*1000;
+r3=1.13;%nondimensional constant
+R=8.314472;
+scpx=a31*exp(-H31/(R*Tk))+a3*Cwcpx^r3*exp(-H3/(R*Tk));
